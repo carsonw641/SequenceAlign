@@ -395,17 +395,18 @@ int main () {
         std::string s1, s2, substring;
         
         std::cout << "Scores: match = " << match << " mismatch = " << mismatch 
-                << " h = " << h << " g = " << gap << std::endl;
-        
+                << " h = " << h << " g = " << gap << '\n' << std::endl;
         std::cout << "Sequence 1 length = " << charSequence.size() << std::endl;
-        std::cout << "Sequence 2 length = " << nodeMap.size() - 1 << std::endl;
+        std::cout << "Sequence 2 length = " << nodeMap.size() - 1 << '\n' << std::endl;
 
 
         traverseMap(input, s1, s2, nodeMap, charSequence);
         traverseLocalMap(substring, localNodeMap, charSequence);
 
-        std::cout << "s1:\n" << s1 << "\ns2:\n"  << s2 << std::endl;
-        std::cout << "Longest matching substring:\n" << substring << std::endl;
+        std::cout << "Global Alignment sequences:" << std::endl;
+
+        std::cout << "s1:\n" << s1 << "\ns2:\n"  << s2 << '\n' << std::endl;
+        std::cout << "Local alignment substring:\n" << substring << std::endl;
     }
 
     input.close();
